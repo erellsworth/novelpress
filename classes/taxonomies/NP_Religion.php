@@ -6,11 +6,13 @@ if(!class_exists('NP_Religion')){
 
 		function __construct() {
 			$this->post_types = array(
-					$this->post_type_list['CULTURE']
+					$this->post_type_list['CULTURE'],
+					$this->post_type_list['CHARACTER']
 				);
 			$this->taxonomy = $this->taxonomy_list['RELIGION'];
 			$this->singular = __('Religion', 'novelpress' );
 			$this->plural = __('Religions', 'novelpress' );
+			$this->args = array('hierarchical' => true);
 		}		
 	}
 

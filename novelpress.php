@@ -102,6 +102,7 @@ require_once NOVELPRESS_PATH . '/classes/taxonomies/NP_Species.php';
 		taxonomies:
 			-species
 			-language
+			-religion
 		meta:
 			-books
 			-stories
