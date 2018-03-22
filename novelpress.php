@@ -21,6 +21,7 @@ $config = array();
 define('NOVELPRESS_CONFIG', $config);
 
 require_once NOVELPRESS_PATH . '/traits/NP_PostType.php';
+require_once NOVELPRESS_PATH . '/traits/NP_Taxonomy.php';
 require_once NOVELPRESS_PATH . '/classes/NP_Series.php';
 require_once NOVELPRESS_PATH . '/classes/NP_Book.php';
 require_once NOVELPRESS_PATH . '/classes/NP_Story.php';

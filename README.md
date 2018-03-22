@@ -1,4 +1,4 @@
-# novelpress
+# NovelPress
 A WordPress plugin for novel writers
 
-##Very much still in alpha
+###Very much still in alpha
