@@ -20,14 +20,38 @@ $config = array();
 
 define('NOVELPRESS_CONFIG', $config);
 
+//post types:
+$post_types = array(
+		'SERIES' => __('series', 'novelpress'),
+		'BOOK' => __('book', 'novelpress'),
+		'STORY' =>  __('story', 'novelpress'),
+		'STORY_SETTING' =>  __('story_setting', 'novelpress'),
+		'CULTURE' =>  __('culture', 'novelpress'),
+		'CHARACTER' =>  __('character', 'novelpress')
+	);
+
+define('NOVELPRESS_POST_TYPES', $post_types);
+
 require_once NOVELPRESS_PATH . '/traits/NP_PostType.php';
-require_once NOVELPRESS_PATH . '/traits/NP_Taxonomy.php';
 require_once NOVELPRESS_PATH . '/classes/NP_Series.php';
 require_once NOVELPRESS_PATH . '/classes/NP_Book.php';
 require_once NOVELPRESS_PATH . '/classes/NP_Story.php';
 require_once NOVELPRESS_PATH . '/classes/NP_StorySetting.php';
 require_once NOVELPRESS_PATH . '/classes/NP_Character.php';
 require_once NOVELPRESS_PATH . '/classes/NP_Culture.php';
+
+
+//categories and tags
+$taxonomies = array(
+		'GENRE' => __('genre', 'novelpress'),
+		'RELIGION' => __('religion', 'novelpress'),
+		'SPECIES' =>  __('species', 'novelpress'),
+		'LANGUAGE' =>  __('language', 'novelpress')
+	);
+define('NOVELPRESS_TAXONOMIES', $taxonomies);
+
+require_once NOVELPRESS_PATH . '/traits/NP_Taxonomy.php';
+require_once NOVELPRESS_PATH . '/classes/NP_Genre.php';
 
 /*
 	Post types:

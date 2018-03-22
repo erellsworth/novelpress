@@ -5,10 +5,10 @@ if(!class_exists('NP_Book')){
 		use NP_PostType;
 
 		function __construct() {
-			$this->post_type = 'book';
+			$this->post_type = $this->post_type_list['BOOK'];
 			$this->singular = 'Book';
 			$this->plural = 'Books';
-			$this->description = 'NovelPress Book Post Type';
+			$this->description = __('NovelPress Book Post Type', 'novelpress');
 		}		
 	}
 

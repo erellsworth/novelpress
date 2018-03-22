@@ -3,6 +3,7 @@
 if(!trait_exists('NP_PostType')){
 	trait NP_PostType {
 
+		public $post_type_list = NOVELPRESS_POST_TYPES;
 		public $singular, $plural, $post_type, $description;
 		public $labels = array();
 		public $args = array();

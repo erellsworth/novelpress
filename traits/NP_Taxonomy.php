@@ -3,7 +3,9 @@
 if(!trait_exists('NP_Taxonomy')){
 	trait NP_Taxonomy {
 
-		public $singular, $plural, $taxonomy, $description;
+		public $post_type_list = NOVELPRESS_POST_TYPES;
+		public $taxonomy_list = NOVELPRESS_TAXONOMIES;
+		public $singular, $plural, $taxonomy;
 		public $labels = array();
 		public $args = array();
 		public $post_types = array();
@@ -31,6 +33,9 @@ if(!trait_exists('NP_Taxonomy')){
 				'items_list'                 => $this->singular . ' ' . __( 'list', 'novelpress' ),
 				'items_list_navigation'      =>$this->singular . ' ' . __( 'navigation', 'novelpress' ),
 			);
+			$labels = array_merge($default_labels, $this->labels);
+
+			return apply_filters('novelpress_' . $this->taxonomy . '_taxonomy_labels', $labels);
 		}
 
 		public function get_args(){
