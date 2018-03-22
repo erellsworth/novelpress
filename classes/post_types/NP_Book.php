@@ -6,8 +6,8 @@ if(!class_exists('NP_Book')){
 
 		function __construct() {
 			$this->post_type = $this->post_type_list['BOOK'];
-			$this->singular = 'Book';
-			$this->plural = 'Books';
+			$this->singular = __('Book', 'novelpress');
+			$this->plural = __('Books', 'novelpress');
 			$this->description = __('NovelPress Book Post Type', 'novelpress');
 		}		
 	}

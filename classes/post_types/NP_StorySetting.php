@@ -5,10 +5,10 @@ if(!class_exists('NP_StorySetting')){
 		use NP_PostType;
 
 		function __construct() {
-			$this->post_type = 'story_setting';
-			$this->singular = 'Story Setting';
-			$this->plural = 'Story Settings';
-			$this->description = 'NovelPress Story Setting Post Type';
+			$this->post_type =  __('story_setting', 'novelpress');
+			$this->singular =  __('Story Setting', 'novelpress');
+			$this->plural =  __('Story Settings', 'novelpress');
+			$this->description =  __('NovelPress Story Setting Post Type', 'novelpress');
 		}		
 	}
 

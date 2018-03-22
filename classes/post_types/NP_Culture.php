@@ -5,10 +5,10 @@ if(!class_exists('NP_Culture')){
 		use NP_PostType;
 
 		function __construct() {
-			$this->post_type = 'culture';
-			$this->singular = 'Culture';
-			$this->plural = 'Cultures';
-			$this->description = 'NovelPress Culture Post Type';
+			$this->post_type = __('culture', 'novelpress');
+			$this->singular = __('Culture', 'novelpress');
+			$this->plural = __('Cultures', 'novelpress');
+			$this->description = __('NovelPress Culture Post Type', 'novelpress');
 		}		
 	}
 
