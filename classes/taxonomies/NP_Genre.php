@@ -11,8 +11,8 @@ if(!class_exists('NP_Genre')){
 					$this->post_type_list['STORY']
 				);
 			$this->taxonomy = $this->taxonomy_list['GENRE'];
-			$this->singular = 'Genre';
-			$this->plural = 'Genres';
+			$this->singular = __('Genre', 'novelpress' );
+			$this->plural = __('Genres', 'novelpress' );
 		}		
 	}
 

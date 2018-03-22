@@ -51,6 +51,9 @@ define('NOVELPRESS_TAXONOMIES', $taxonomies);
 
 require_once NOVELPRESS_PATH . '/traits/NP_Taxonomy.php';
 require_once NOVELPRESS_PATH . '/classes/taxonomies/NP_Genre.php';
+require_once NOVELPRESS_PATH . '/classes/taxonomies/NP_Religion.php';
+require_once NOVELPRESS_PATH . '/classes/taxonomies/NP_Language.php';
+require_once NOVELPRESS_PATH . '/classes/taxonomies/NP_Species.php';
 
 /*
 	Post types:
@@ -89,6 +92,7 @@ require_once NOVELPRESS_PATH . '/classes/taxonomies/NP_Genre.php';
 	Cultures:
 		taxonomies:
 			-religion
+			-language
 		meta:
 			-technology
 			-magic
