@@ -47,6 +47,7 @@ if(!trait_exists('NP_Taxonomy')){
 				'show_admin_column'          => true,
 				'show_in_nav_menus'          => false,
 				'show_tagcloud'              => false,
+				'show_in_rest'				 => true	
 			);
 
 			$args = array_merge($default_args, $this->args);

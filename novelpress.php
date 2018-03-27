@@ -55,6 +55,10 @@ require_once NOVELPRESS_PATH . '/classes/taxonomies/NP_Religion.php';
 require_once NOVELPRESS_PATH . '/classes/taxonomies/NP_Language.php';
 require_once NOVELPRESS_PATH . '/classes/taxonomies/NP_Species.php';
 
+//gutenberg blocks
+require_once NOVELPRESS_PATH . '/blocks/NP_Blocks.php';
+
+
 /*
 	Post types:
 	Series:

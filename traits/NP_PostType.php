@@ -73,6 +73,7 @@ if(!trait_exists('NP_PostType')){
 				'exclude_from_search'   => false,
 				'publicly_queryable'    => true,
 				'capability_type'       => 'page',
+				'show_in_rest' => true				
 			);
 			
 			$args = array_merge($default_args, $this->args);
