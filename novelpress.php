@@ -55,6 +55,10 @@ require_once NOVELPRESS_PATH . '/classes/taxonomies/NP_Religion.php';
 require_once NOVELPRESS_PATH . '/classes/taxonomies/NP_Language.php';
 require_once NOVELPRESS_PATH . '/classes/taxonomies/NP_Species.php';
 
+//meta boxes
+require_once NOVELPRESS_PATH . '/traits/NP_Metabox.php';
+require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_BookMeta.php';
+
 //gutenberg blocks
 //require_once NOVELPRESS_PATH . '/blocks/NP_Blocks.php';
 
