@@ -24,5 +24,5 @@ if(!class_exists('NP_BookMeta')){
 	}
 
 	$NP_BookMeta = new NP_BookMeta();
-	add_action('add_meta_boxes', array($NP_BookMeta, 'add_box'));
+	$NP_BookMeta->init();
 }
