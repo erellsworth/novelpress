@@ -9,13 +9,7 @@ if(!class_exists('NP_Series')){
 			$this->singular = __('Series', 'novelpress');
 			$this->plural = __('Series', 'novelpress');
 			$this->description = __('NovelPress Series Post Type', 'novelpress');
-		}		
-
-		public function get_relations(){
-			return array(
-				'has_many' => array('NP_Book')
-				);
-		}		
+		}				
 	}
 
 	$NP_Series = new NP_Series();

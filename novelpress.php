@@ -58,6 +58,13 @@ require_once NOVELPRESS_PATH . '/classes/taxonomies/NP_Species.php';
 //meta boxes
 require_once NOVELPRESS_PATH . '/traits/NP_Metabox.php';
 require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_BookMeta.php';
+require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_StoryMeta.php';
+require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_StorySettingMeta.php';
+require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_SeriesMeta.php';
+require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_CharacterMeta.php';
+require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_CultureMeta.php';
+
+
 
 //gutenberg blocks
 //require_once NOVELPRESS_PATH . '/blocks/NP_Blocks.php';
@@ -85,25 +92,22 @@ require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_BookMeta.php';
 			-links
 			-publication_date
 			-date_completed
-			-series
 			-number_in_series
-			-characters
-			-story_settings
 		relations:
-			belongs to one series
-			has many characters
-			has many story_settings						
+			has many story_settings	
+			has many characters					
 	
 	Story Setting:
 		taxonomies:
 		meta:
-			-books
-			-characters
 			-population
 			-history
 			-species
-			-culture
 		relations
+			belongs to series
+			has many books
+			has many characters
+			has many cultures		
 
 	Cultures:
 		taxonomies:
@@ -114,6 +118,11 @@ require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_BookMeta.php';
 			-technology
 			-magic
 			-economy
+		relations
+			belongs to series
+			has many books
+			has many characters
+			has many story_settings				
 
 	Characters:
 		taxonomies:
@@ -121,12 +130,11 @@ require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_BookMeta.php';
 			-language
 			-religion
 		meta:
-			-books
-			-stories
-			-story_settings
 			-physical_description
 			-history
-	
-	Post type relations:
+		relations
+			-has many books
+			-has many stories
+			-has many story_settings
 
 */

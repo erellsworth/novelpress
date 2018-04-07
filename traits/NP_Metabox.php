@@ -29,7 +29,6 @@ if(!trait_exists('NP_Metabox')){
 
 		public function save_post($post_id, $post){
 			if($this->verify($_POST, $post_id)){
-				//error_log('np_meta ' . print_r($_POST['np_meta'], true));
 				foreach ($_POST['np_meta'] as $key => $value) {
 					if(is_array($value)){
 						$this->save_meta_array($post->ID, $key, $value);
@@ -54,7 +53,7 @@ if(!trait_exists('NP_Metabox')){
 		}
 
 		public function updated_connected_posts($post_id, $values){
-			
+			//these methods update related posts with the current post id
 			foreach ($values as $post_type => $connected_post) {
 				$inverse_relation = $_POST['np_connections'][$post_type]['inverse_relation'];
 				$inverse_class = $_POST['np_connections'][$post_type]['inverse_class'];
@@ -136,7 +135,7 @@ if(!trait_exists('NP_Metabox')){
 					);		
 				$the_query = new WP_Query( $args ); ?>
 				<select multiple class="widefat" name="np_meta[has_many][<?php echo $relation['post_class']; ?>][]">
-					<option>Select <?php echo $post_class->plural; ?></option>
+					<option>None</option>
 					<?php
 					while ($the_query->have_posts() ) { $the_query->the_post();
 						$selected = false;
