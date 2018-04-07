@@ -71,13 +71,14 @@ require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_BookMeta.php';
 		meta:
 			-books
 			-stories
+		relations:
+			has many books
+			has many stories
 
 	Books and stories:
 		taxonomies:
 			-genres
 		meta:
-			-characters
-			-story_settings
 			-wordcount ['current' => 0, 'complete' =>0]
 			-status
 			-publisher
@@ -86,6 +87,12 @@ require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_BookMeta.php';
 			-date_completed
 			-series
 			-number_in_series
+			-characters
+			-story_settings
+		relations:
+			belongs to one series
+			has many characters
+			has many story_settings						
 	
 	Story Setting:
 		taxonomies:
@@ -96,12 +103,14 @@ require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_BookMeta.php';
 			-history
 			-species
 			-culture
+		relations
 
 	Cultures:
 		taxonomies:
 			-religion
 			-language
 		meta:
+			-books
 			-technology
 			-magic
 			-economy
@@ -117,4 +126,7 @@ require_once NOVELPRESS_PATH . '/classes/meta_boxes/NP_BookMeta.php';
 			-story_settings
 			-physical_description
 			-history
+	
+	Post type relations:
+
 */
